@@ -954,7 +954,7 @@ function layout(){
     const fits=()=>{const r=core.getBoundingClientRect(),top=r.top-hr.top;return Math.hypot(r.width/2,cy-top)<=R-Math.hypot(cw,ch)/2-14};
     const sw=Math.round(Math.min(800,W*.5));core.style.setProperty('--sw',sw+'px');
     let lo=30,hi=118;for(let k=0;k<12;k++){const m=(lo+hi)/2;core.style.setProperty('--hs',m+'px');fits()?lo=m:hi=m}
-    core.style.setProperty('--hs',Math.max(lo,Math.min(84,W*.06))+'px');}
+    core.style.setProperty('--hs',Math.max(lo*.88,Math.min(76,W*.055))+'px');}
   place();
 }
 function place(){
@@ -971,7 +971,7 @@ cards.forEach(c=>{c.addEventListener('pointerenter',()=>paused=true);c.addEventL
 function tick(t){const dt=last?Math.min(50,t-last):16;last=t;if(!paused&&!reduce){off+=dt*.004;place()}requestAnimationFrame(tick)}
 addEventListener('resize',layout);addEventListener('load',layout);layout();requestAnimationFrame(tick);
 function fadeFit(){const h=hero.getBoundingClientRect(),t=core.querySelector('h1').getBoundingClientRect(),fade=$('.hfade');
-  const lift=innerWidth<761?-46:18,fromBottom=(h.bottom-t.top+lift)/h.height*100;fade.style.setProperty('--fadeA',fromBottom+'%');fade.style.setProperty('--fadeB',(fromBottom+(innerWidth<761?9:14))+'%')}
+  const lift=innerWidth<761?-46:-34,fromBottom=(h.bottom-t.top+lift)/h.height*100;fade.style.setProperty('--fadeA',fromBottom+'%');fade.style.setProperty('--fadeB',(fromBottom+(innerWidth<761?9:14))+'%')}
 addEventListener('resize',fadeFit);addEventListener('load',fadeFit);setTimeout(fadeFit,300);
 // the web: nodes around "your business", animated pulses along each strand
 const NODES=['Design','Speed','Mobile','Message','Proof','Booking','Forms','Brand'];
