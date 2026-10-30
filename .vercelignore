@@ -1,0 +1,5 @@
+.env*
+.DS_Store
+README.md
+index-seo-version.html
+_archive

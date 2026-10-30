@@ -1,0 +1,5 @@
+.vercel
+.env*
+.DS_Store
+_archive/
+index-seo-version.html
