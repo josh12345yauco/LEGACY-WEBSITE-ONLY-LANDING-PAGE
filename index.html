@@ -367,7 +367,7 @@ section{position:relative}
 .seal div{animation:spin 30s linear infinite reverse}
 .seal b{display:block;font-family:var(--d);font-size:46px;line-height:.95;text-transform:uppercase}
 .seal b em{font-style:normal;color:var(--cy)}
-.seal small{display:block;margin-top:8px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.seal small{display:block;margin-top:10px;font-size:11px;line-height:1.5;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ptxt{padding:60px 60px 60px 0}
 .ptxt h2{font-size:clamp(34px,3.4vw,48px)}
@@ -435,6 +435,7 @@ footer img{height:22px;width:auto}
   .prices,.plain{grid-template-columns:1fr}
   .ptxt{padding:0 28px 40px}
   .pvis{min-height:320px}
+  .seal b{font-size:38px}.seal small{font-size:10px;margin-top:8px}
   .prom{background:linear-gradient(var(--wh) 70%,var(--blk) 70%)}
   .mbar{display:flex}
 }
@@ -476,6 +477,9 @@ footer img{height:22px;width:auto}
 a.btn[href$="#book"],.mcta .btn,.mbar .btn{background:linear-gradient(100deg,#00B4FF 0%,#00D5E8 45%,#00E0B0 100%)!important;color:#02121c!important;border:0!important;box-shadow:0 10px 30px -12px rgba(0,213,232,.75)!important}
 a.btn[href$="#book"]:hover{filter:brightness(1.07);transform:translateY(-2px)}
 .cta{background:#020609!important;color:#fff!important}.cta h2 em{color:#00D5E8}
+.ghlform{max-width:640px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;text-align:left;box-shadow:0 24px 70px -30px rgba(0,213,232,.55)}
+.ghlform iframe{display:block;width:100%;height:700px;border:0}
+@media(max-width:640px){.ghlform iframe{height:860px}}
 .hplay{gap:10px;border:1.5px solid currentColor;background:transparent;color:inherit;opacity:.95}
 .hplay .pi{width:26px;height:26px;border-radius:50%;background:linear-gradient(100deg,#00B4FF 0%,#00D5E8 45%,#00E0B0 100%);position:relative;flex:none}
 .hplay .pi::after{content:"";position:absolute;left:10px;top:7px;border-left:9px solid #02121c;border-top:6px solid transparent;border-bottom:6px solid transparent}
@@ -865,7 +869,7 @@ br.mb{display:none}
 <section class="prom">
   <div class="wrap">
     <div class="pbox rv">
-      <div class="pvis"><div class="seal"><div><b>The<br><em>Legacy</em><br>Pledge</b><small>Straight talk · Real results</small></div></div></div>
+      <div class="pvis"><div class="seal"><div><b>The<br><em>Legacy</em><br>Pledge</b><small>Straight talk<br>Real results</small></div></div></div>
       <div class="ptxt"><span class="kick">Our promise to you</span><h2>We treat your money like it's our own</h2>
         <p>“Switching agencies is scary. You've probably been burned before. So here's our promise: no jargon, no fluff reports, no pushy sales. We'll tell you the truth on the first call, even if the truth is that you don't need us. And if we work together, we'll fight for every call like it's our own business on the line.”</p>
         <div class="sig">— The Legacy LinQ team <svg viewBox="0 0 160 50" fill="none" stroke="#0B0F14" stroke-width="2" stroke-linecap="round"><path d="M6 36c10-20 18-28 22-24s-8 26-4 26 14-22 20-22-6 18 0 18 10-14 16-14 2 12 8 12 14-20 22-20-4 22 4 22 18-10 30-14"/></svg></div>
@@ -913,8 +917,11 @@ br.mb{display:none}
   <div class="wrap">
     <h2 class="rv">Stop losing customers to your competitor</h2>
     <p class="rv d1">Book a free 20-minute strategy call. We'll review your current site, show you what's costing you customers, and exactly what a new one would do.</p>
-    <!-- PLACEHOLDER: point this at the real GoHighLevel calendar -->
-    <a class="btn rv d2" href="#book">Book My Free Strategy Call →</a>
+    <!-- GoHighLevel form "Website Landing Page Form": submissions go to the ManyChat Leads pipeline -->
+    <div class="ghlform rv d2">
+      <iframe src="https://links.legacylinqdigital.com/widget/form/Z8560ftOOYu9FKR0NetR" id="inline-Z8560ftOOYu9FKR0NetR" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Website Landing Page Form" data-height="700" data-layout-iframe-id="inline-Z8560ftOOYu9FKR0NetR" data-form-id="Z8560ftOOYu9FKR0NetR" title="Website Landing Page Form"></iframe>
+    </div>
+    <script src="https://links.legacylinqdigital.com/js/form_embed.js" defer></script>
   </div>
 </section>
 </main>

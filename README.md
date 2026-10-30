@@ -20,5 +20,4 @@ python3 -m http.server 4500
 Then open http://localhost:4500
 
 ## Still to do before sending traffic
-- Book buttons point to `#book`; the GoHighLevel calendar isn't wired yet
 - Two reviews (B&B, Lumen) are placeholder copy marked `data-placeholder`; swap in the real words
